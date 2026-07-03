@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ürün — Aurel Valmont</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#0a0a0a;
+  --white:#fff;
+  --gray-bg:#f0efed;
+  --gray-mid:#999;
+  --gray-border:#e0e0e0;
+  --sans:'Montserrat',sans-serif;
+  --serif:'Cormorant Garamond',serif;
+}
+body{font-family:var(--sans);color:var(--black);background:var(--white)}
+
+/* NAV */
+nav{
+  position:sticky;top:0;z-index:100;
+  background:var(--white);
+  border-bottom:1px solid var(--gray-border);
+  height:56px;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  padding:0 24px;
+}
+.nav-hamburger{background:none;border:none;cursor:pointer;padding:4px;display:flex;flex-direction:column;gap:5px}
+.nav-hamburger span{display:block;width:20px;height:1px;background:var(--black)}
+.nav-logo{display:flex;align-items:center;text-decoration:none;color:var(--black)}
+.nav-brand{font-family:'Cocogoose',sans-serif;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--black);margin-left:12px;opacity:1;max-width:200px;overflow:hidden;white-space:nowrap;transition:opacity 0.6s ease,max-width 0.6s ease,margin 0.6s ease}
+nav.scrolled .nav-brand{opacity:0;max-width:0;margin-left:0}
+.nav-right{display:flex;align-items:center;justify-content:flex-end;gap:20px}
+.nav-icon{background:none;border:none;cursor:pointer;padding:4px;display:flex;align-items:center;color:var(--black);transition:opacity .2s}
+.nav-icon:hover{opacity:.5}
+
+/* PRODUCT LAYOUT */
+.product-layout{
+  display:grid;
+  grid-template-columns:280px 1fr 280px;
+  min-height:calc(100vh - 56px);
+  align-items:start;
+}
+
+/* LEFT COL */
+.col-left{
+  padding:32px 24px;
+  position:sticky;
+  top:56px;
+  max-height:calc(100vh - 56px);
+  overflow-y:auto;
+}
+.p-name{font-size:13px;font-weight:400;letter-spacing:.02em;color:var(--black);line-height:1.4;margin-bottom:6px}
+.p-price{font-size:13px;font-weight:400;color:var(--black);margin-bottom:28px}
+.accordion{border-top:1px solid var(--gray-border)}
+.acc-item{border-bottom:1px solid var(--gray-border)}
+.acc-trigger{
+  width:100%;display:flex;align-items:center;justify-content:space-between;
+  padding:14px 0;background:none;border:none;cursor:pointer;
+  font-family:var(--sans);font-size:11px;font-weight:400;letter-spacing:.04em;
+  color:var(--black);text-align:left;
+}
+.acc-trigger svg{flex-shrink:0;transition:transform .2s}
+.acc-trigger.open svg{transform:rotate(180deg)}
+.acc-body{overflow:hidden;max-height:0;transition:max-height .3s ease}
+.acc-body.open{max-height:600px}
+.acc-content{padding:0 0 16px;font-size:11px;font-weight:300;line-height:1.8;color:#555}
+.acc-content p{margin-bottom:6px}
+.specs-table{width:100%;border-collapse:collapse}
+.specs-table td{padding:4px 0;font-size:11px;font-weight:300;vertical-align:top;line-height:1.6}
+.specs-table td:first-child{color:var(--gray-mid);width:45%;padding-right:8px}
+
+/* RELATED THUMBS */
+.related-wrap{margin-top:24px}
+.related-title{font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-mid);margin-bottom:12px}
+.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.related-card{text-decoration:none;display:block}
+.related-img{aspect-ratio:4/5;background:var(--gray-bg);margin-bottom:6px;overflow:hidden}
+.related-img img{width:100%;height:100%;object-fit:contain;display:block}
+.related-img .rph{font-family:var(--serif);font-size:14px;font-weight:300;font-style:italic;color:#ccc}
+.related-name{font-size:9px;font-weight:400;color:var(--black);line-height:1.3;margin-bottom:2px}
+.related-price{font-size:9px;font-weight:300;color:var(--gray-mid)}
+
+/* CENTER COL */
+.col-center{border-left:1px solid var(--gray-border);border-right:1px solid var(--gray-border)}
+.product-images{display:flex;flex-direction:column;gap:2px}
+.main-img{background:var(--gray-bg);width:100%}
+.main-img img{width:100%;height:auto;display:block}
+.main-img .ph{padding:200px 0;text-align:center;font-family:var(--serif);font-size:48px;font-weight:300;font-style:italic;color:#ccc}
+.extra-img{background:var(--gray-bg);width:100%}
+.extra-img img{width:100%;height:auto;display:block}
+.extra-img .ph{padding:160px 0;text-align:center;font-family:var(--serif);font-size:48px;font-weight:300;font-style:italic;color:#ccc}
+
+/* RIGHT COL */
+.col-right{
+  padding:32px 24px;
+  position:sticky;
+  top:56px;
+  max-height:calc(100vh - 56px);
+  overflow-y:auto;
+}
+.color-label{font-size:11px;font-weight:400;color:var(--black);margin-bottom:12px}
+.color-swatches{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
+.swatch{
+  width:40px;height:40px;border:1px solid var(--gray-border);cursor:pointer;
+  transition:border-color .15s;display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+.swatch.active{border-color:var(--black);border-width:2px}
+.swatch img{width:100%;height:100%;object-fit:cover}
+.swatch-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:8px;color:var(--gray-mid)}
+
+.size-label{font-size:11px;font-weight:400;color:var(--black);margin-bottom:12px;display:flex;justify-content:space-between}
+.size-link{font-size:10px;font-weight:300;color:var(--gray-mid);text-decoration:underline;cursor:pointer;border:none;background:none;font-family:var(--sans)}
+.size-select{
+  width:100%;padding:13px 16px;
+  border:1px solid var(--gray-border);
+  background:var(--white);
+  font-size:12px;font-family:var(--sans);
+  color:var(--black);appearance:none;
+  cursor:pointer;outline:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='1.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 14px center;
+  transition:border-color .2s;
+  margin-bottom:12px;
+}
+.size-select:focus{border-color:var(--black)}
+
+.add-btn{
+  width:100%;padding:15px;
+  background:var(--black);color:var(--white);
+  border:none;font-size:11px;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;
+  font-family:var(--sans);cursor:pointer;
+  transition:opacity .2s;
+  margin-bottom:24px;
+}
+.add-btn:hover{opacity:.8}
+.add-btn:disabled{opacity:.4;cursor:default}
+
+.ship-note{font-size:10px;font-weight:300;color:var(--gray-mid);line-height:1.7;border-top:1px solid var(--gray-border);padding-top:16px}
+
+/* YOU MAY ALSO LIKE */
+.also-like{padding:60px 24px;border-top:2px solid var(--gray-border);margin-top:2px}
+.also-title{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;margin-bottom:24px;color:var(--black)}
+.also-grid{display:grid;grid-template-columns:repeat(4,1fr);column-gap:14px;row-gap:0;padding:0}
+.also-card{background:var(--white);text-decoration:none;display:block;padding-bottom:20px}
+.also-card-img{aspect-ratio:4/5;background:var(--gray-bg);overflow:hidden}
+.also-card-img img{width:100%;height:100%;object-fit:contain;display:block}
+.also-ph{font-family:var(--serif);font-size:20px;font-weight:300;font-style:italic;color:#ccc}
+.also-info{display:flex;justify-content:space-between;padding:8px 10px 12px;gap:4px}
+.also-name{font-size:10px;font-weight:400;color:var(--black)}
+.also-price{font-size:10px;color:var(--black);white-space:nowrap}
+
+@media(max-width:1024px){
+  .product-layout{grid-template-columns:240px 1fr 240px}
+}
+@media(max-width:768px){
+  .product-layout{grid-template-columns:1fr;display:block}
+  .col-left,.col-right{position:static;max-height:none;border-top:1px solid var(--gray-border)}
+  .col-center{border:none}
+  .also-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div>
+    <button class="nav-hamburger" aria-label="Menü"><span></span><span></span></button>
+  </div>
+  <a href="index.html" class="nav-logo">
+    <img src="siyah.png" alt="Aurel Valmont" style="height:40px;width:auto;display:block;">
+    <span class="nav-brand">Aurel Valmont</span>
+  </a>
+  <div class="nav-right">
+    <button class="nav-icon" aria-label="Ara">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+    </button>
+    <button class="nav-icon" aria-label="Hesap">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    </button>
+    <button class="nav-icon" aria-label="Çanta">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="product-layout">
+
+  <!-- LEFT -->
+  <aside class="col-left">
+    <p class="p-name" id="p-name">Yükleniyor…</p>
+    <p class="p-price" id="p-price"></p>
+
+    <div class="accordion">
+      <div class="acc-item">
+        <button class="acc-trigger" id="acc1">
+          Ürün Detayları
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="acc-body" id="acc1-body">
+          <div class="acc-content" id="acc-desc">—</div>
+        </div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-trigger" id="acc2">
+          Özellikler
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="acc-body" id="acc2-body">
+          <div class="acc-content">
+            <table class="specs-table" id="specs-table"></table>
+          </div>
+        </div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-trigger" id="acc3">
+          Kargo &amp; İade
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="acc-body" id="acc3-body">
+          <div class="acc-content">
+            <p>Türkiye geneli kargo 1-3 iş günü.</p>
+            <p>14 gün içinde ücretsiz iade.</p>
+            <p>Orijinal kutu ve garanti belgesi ile gönderilir.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="related-wrap">
+      <p class="related-title">Benzer Ürünler</p>
+      <div class="related-grid" id="related-grid"></div>
+    </div>
+  </aside>
+
+  <!-- CENTER -->
+  <main class="col-center">
+    <div class="product-images" id="product-images">
+      <div class="main-img"><span class="ph">AV</span></div>
+    </div>
+  </main>
+
+  <!-- RIGHT -->
+  <aside class="col-right">
+    <div id="color-section" style="display:none">
+      <p class="color-label" id="color-label">Renk</p>
+      <div class="color-swatches" id="color-swatches"></div>
+    </div>
+
+    <div class="size-label">
+      <span>Beden Seç</span>
+    </div>
+    <select class="size-select" id="size-select">
+      <option value="">Beden Seçin</option>
+      <option>XS</option>
+      <option>S</option>
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+
+    <button class="add-btn" id="add-btn">Sepete Ekle</button>
+
+    <div class="ship-note">
+      Ücretsiz kargo — 1-3 iş günü teslimat.<br>
+      2 Yıl garanti. Orijinal kutu ile gönderilir.
+    </div>
+  </aside>
+</div>
+
+<!-- YOU MAY ALSO LIKE -->
+<div class="also-like">
+  <p class="also-title">You May Also Like</p>
+  <div class="also-grid" id="also-grid"></div>
+</div>
+
+<script>
+// Accordion
+['acc1','acc2','acc3'].forEach(id => {
+  const btn = document.getElementById(id);
+  const body = document.getElementById(id+'-body');
+  btn.addEventListener('click', () => {
+    const open = btn.classList.toggle('open');
+    body.classList.toggle('open', open);
+  });
+});
+
+async function loadProduct() {
+  const params = new URLSearchParams(location.search);
+  const id = parseInt(params.get('id'));
+
+  let products = [];
+  try {
+    const r = await fetch('products.json');
+    products = await r.json();
+  } catch(e) {}
+
+  const p = products.find(x => x.id === id) || {
+    id, baslik:'AV-2049 Oval Güneş Gözlüğü', fiyat_tl:1299,
+    aciklama:'Cinsiyet: Kadın Çerçeve Tipi: Metal Ekartman:51-20-143 Çerçeve Rengi: Siyah Cam Rengi: Mavi UV400 Korumalı',
+    ozellikler:[{ozellik:'Cinsiyet',deger:'Kadın'},{ozellik:'Çerçeve Formu',deger:'Oval'},{ozellik:'Filtre',deger:'UV400'},{ozellik:'Garanti',deger:'2 Yıl'}],
+    gorseller:[]
+  };
+
+  document.title = p.baslik + ' — Aurel Valmont';
+  document.getElementById('p-name').textContent = p.baslik;
+  document.getElementById('p-price').textContent = '₺' + p.fiyat_tl.toLocaleString('tr-TR');
+
+  // Açıklama
+  const desc = document.getElementById('acc-desc');
+  desc.textContent = p.aciklama || '—';
+
+  // Özellikler
+  const specs = document.getElementById('specs-table');
+  specs.innerHTML = (p.ozellikler||[]).map(o =>
+    `<tr><td>${o.ozellik}</td><td>${o.deger}</td></tr>`
+  ).join('') || '<tr><td colspan="2">—</td></tr>';
+
+  // Görseller
+  const imgWrap = document.getElementById('product-images');
+  if (p.gorseller && p.gorseller.length) {
+    imgWrap.innerHTML = p.gorseller.map((src,i) =>
+      `<div class="${i===0?'main-img':'extra-img'}"><img src="${src}" alt="${p.baslik}" loading="${i===0?'eager':'lazy'}"></div>`
+    ).join('');
+  }
+
+  // Renk swatchları (görsel varsa)
+  if (p.gorseller && p.gorseller.length > 1) {
+    document.getElementById('color-section').style.display = 'block';
+    const swatches = document.getElementById('color-swatches');
+    swatches.innerHTML = p.gorseller.slice(0,4).map((src,i) =>
+      `<div class="swatch${i===0?' active':''}" onclick="selectSwatch(this,${i})">
+        <img src="${src}" alt="">
+       </div>`
+    ).join('');
+  }
+
+  // Also Like
+  const also = document.getElementById('also-grid');
+  const similar = products.filter(x=>x.id!==id).slice(0,4);
+  also.innerHTML = similar.map(s => {
+    const img = s.gorseller&&s.gorseller[0]
+      ? `<img src="${s.gorseller[0]}" alt="${s.baslik}" loading="lazy">`
+      : `<span class="also-ph">AV</span>`;
+    return `<a class="also-card" href="urun.html?id=${s.id}">
+      <div class="also-card-img">${img}</div>
+      <div class="also-info">
+        <span class="also-name">${s.baslik}</span>
+        <span class="also-price">₺${s.fiyat_tl.toLocaleString('tr-TR')}</span>
+      </div>
+    </a>`;
+  }).join('');
+
+  // Related (sol kolon)
+  const relGrid = document.getElementById('related-grid');
+  relGrid.innerHTML = similar.slice(0,2).map(s => {
+    const img = s.gorseller&&s.gorseller[0]
+      ? `<img src="${s.gorseller[0]}" alt="${s.baslik}" loading="lazy">`
+      : `<span class="rph">AV</span>`;
+    return `<a class="related-card" href="urun.html?id=${s.id}">
+      <div class="related-img">${img}</div>
+      <p class="related-name">${s.baslik}</p>
+      <p class="related-price">₺${s.fiyat_tl.toLocaleString('tr-TR')}</p>
+    </a>`;
+  }).join('');
+}
+
+function selectSwatch(el, idx) {
+  document.querySelectorAll('.swatch').forEach(s=>s.classList.remove('active'));
+  el.classList.add('active');
+  const imgs = document.querySelectorAll('#product-images img');
+  if (imgs[idx]) imgs[idx].scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+document.getElementById('add-btn').addEventListener('click', function() {
+  const sel = document.getElementById('size-select').value;
+  if (!sel) { document.getElementById('size-select').style.borderColor='#000'; return; }
+  this.textContent = 'Eklendi ✓';
+  setTimeout(() => this.textContent = 'Sepete Ekle', 2000);
+});
+
+loadProduct();
+
+window.addEventListener('scroll', () => {
+  document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
+</script>
+</body>
+</html>
