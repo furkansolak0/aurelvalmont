@@ -151,12 +151,10 @@ nav.scrolled .nav-brand{opacity:0;max-width:0;margin-left:0}
 .empty-state p{font-size:14px;color:var(--gray-mid);margin-bottom:16px}
 .empty-state a{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--black);text-decoration:none;border-bottom:1px solid var(--black)}
 
-/* PAGINATION */
-.pagination{display:flex;align-items:center;justify-content:center;gap:2px;padding:48px 24px;border-top:1px solid var(--gray-border);margin-top:2px}
-.pg-btn{width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:400;letter-spacing:.04em;background:none;border:1px solid transparent;cursor:pointer;font-family:var(--sans);color:var(--gray-mid);transition:all .15s}
-.pg-btn:hover{border-color:var(--gray-border);color:var(--black)}
-.pg-btn.active{border-color:var(--black);color:var(--black)}
-.pg-btn-arrow{width:auto;padding:0 14px;font-size:11px}
+/* VIEW MORE */
+.pagination{display:flex;align-items:center;justify-content:center;padding:48px 24px}
+.view-more-btn{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;background:none;border:1px solid var(--black);color:var(--black);padding:14px 48px;cursor:pointer;transition:background .2s,color .2s}
+.view-more-btn:hover{background:var(--black);color:var(--white)}
 
 /* REFINE PANEL */
 .refine-overlay{position:fixed;inset:0;background:rgba(0,0,0,.3);z-index:200;display:none;opacity:0;pointer-events:none;transition:opacity .25s}
@@ -317,7 +315,7 @@ nav.scrolled .nav-brand{opacity:0;max-width:0;margin-left:0}
 
 <script>
 const PER = 40;
-let page = 1, sort = 'default', filtered = [], activeKat = '';
+let shown = PER, sort = 'default', filtered = [], activeKat = '';
 let products = [];
 
 async function loadProducts() {
@@ -361,7 +359,7 @@ function filter() {
   });
   if (sort==='price-asc') filtered.sort((a,b)=>a.fiyat_tl-b.fiyat_tl);
   else if (sort==='price-desc') filtered.sort((a,b)=>b.fiyat_tl-a.fiyat_tl);
-  page = 1;
+  shown = PER;
   render();
 }
 
@@ -369,13 +367,13 @@ function render() {
   const grid = document.getElementById('grid');
   const empty = document.getElementById('empty');
   const pag = document.getElementById('pag');
-  const slice = filtered.slice((page-1)*PER, page*PER);
 
-  if (!slice.length) {
+  if (!filtered.length) {
     grid.innerHTML=''; empty.classList.add('show'); pag.innerHTML=''; return;
   }
   empty.classList.remove('show');
 
+  const slice = filtered.slice(0, shown);
   grid.innerHTML = slice.map(p => {
     const img1 = p.gorseller && p.gorseller[0];
     const img2 = p.gorseller && p.gorseller[1];
@@ -394,21 +392,17 @@ function render() {
     </a>`;
   }).join('');
 
-  renderPag();
+  if (shown < filtered.length) {
+    pag.innerHTML = `<button class="view-more-btn" onclick="loadMore()">DAHA FAZLA GÖSTER</button>`;
+  } else {
+    pag.innerHTML = '';
+  }
 }
 
-function renderPag() {
-  const total = Math.ceil(filtered.length/PER);
-  const pag = document.getElementById('pag');
-  if (total<=1) { pag.innerHTML=''; return; }
-  let h = '';
-  if (page>1) h+=`<button class="pg-btn pg-btn-arrow" onclick="goPage(${page-1})">←</button>`;
-  for (let i=1;i<=total;i++) h+=`<button class="pg-btn${i===page?' active':''}" onclick="goPage(${i})">${String(i).padStart(2,'0')}</button>`;
-  if (page<total) h+=`<button class="pg-btn pg-btn-arrow" onclick="goPage(${page+1})">→</button>`;
-  pag.innerHTML = h;
+function loadMore() {
+  shown += PER;
+  render();
 }
-
-function goPage(n) { page=n; render(); scrollTo({top:0,behavior:'smooth'}); }
 
 function setKat(kat) {
   activeKat = kat;
