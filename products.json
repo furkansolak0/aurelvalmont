@@ -1,33 +1,20 @@
 [
   {
-    "id": 1,
-    "baslik": "Aurel Valmont Kadın Güneş Gözlüğü AV-0001",
-    "stok_kodu": "AV-0001",
+    "id": 14,
+    "baslik": "Aurel Valmont Kadın Güneş Gözlüğü AV-0014",
+    "stok_kodu": "AV-0014",
     "fiyat_tl": 1299,
     "cinsiyet": "Kadın",
     "gorseller": [
-      "urunler/1/main.jpeg",
-      "urunler/1/2.jpeg",
-      "urunler/1/3.jpeg",
-      "urunler/1/4.jpeg"
+      "urunler/14/main.jpeg",
+      "urunler/14/Gemini_Generated_Image_6xvt4i6xvt4i6xvt.jpeg",
+      "urunler/14/Gemini_Generated_Image_7nn4917nn4917nn4.jpeg",
+      "urunler/14/Gemini_Generated_Image_ambqb3ambqb3ambq.jpeg",
+      "urunler/14/Gemini_Generated_Image_hgno7ahgno7ahgno.jpeg",
+      "urunler/14/Gemini_Generated_Image_t4umf7t4umf7t4um.jpeg",
+      "urunler/14/Gemini_Generated_Image_t7fwkot7fwkot7fw.jpeg"
     ],
-    "ana_gorsel": "urunler/1/main.jpeg"
-  },
-  {
-    "id": 2,
-    "baslik": "Aurel Valmont Kadın Güneş Gözlüğü AV-0002",
-    "stok_kodu": "AV-0002",
-    "fiyat_tl": 1299,
-    "cinsiyet": "Kadın",
-    "gorseller": [
-      "urunler/2/main.jpeg",
-      "urunler/2/1.jpeg",
-      "urunler/2/2.jpeg",
-      "urunler/2/3.jpeg",
-      "urunler/2/4.jpeg",
-      "urunler/2/5.jpeg"
-    ],
-    "ana_gorsel": "urunler/2/main.jpeg"
+    "ana_gorsel": "urunler/14/main.jpeg"
   },
   {
     "id": 3,
@@ -46,20 +33,99 @@
     "ana_gorsel": "urunler/3/main.jpeg"
   },
   {
-    "id": 4,
-    "baslik": "Aurel Valmont Kadın Güneş Gözlüğü AV-0004",
-    "stok_kodu": "AV-0004",
+    "id": 1,
+    "baslik": "Aurel Valmont Kadın Güneş Gözlüğü AV-0001",
+    "stok_kodu": "AV-0001",
     "fiyat_tl": 1299,
     "cinsiyet": "Kadın",
     "gorseller": [
-      "urunler/4/main.jpeg",
-      "urunler/4/11.jpeg",
-      "urunler/4/12.jpeg",
-      "urunler/4/13.jpeg",
-      "urunler/4/14.jpeg",
-      "urunler/4/15.jpeg"
+      "urunler/1/main.jpeg",
+      "urunler/1/2.jpeg",
+      "urunler/1/3.jpeg",
+      "urunler/1/4.jpeg"
     ],
-    "ana_gorsel": "urunler/4/main.jpeg"
+    "ana_gorsel": "urunler/1/main.jpeg"
+  },
+  {
+    "id": 11,
+    "baslik": "Aurel Valmont Kadın Güneş Gözlüğü AV-0011",
+    "stok_kodu": "AV-0011",
+    "fiyat_tl": 1299,
+    "cinsiyet": "Kadın",
+    "gorseller": [
+      "urunler/11/main.jpeg",
+      "urunler/11/Gemini_Generated_Image_ihsjf6ihsjf6ihsj.jpeg",
+      "urunler/11/Gemini_Generated_Image_o249u3o249u3o249.jpeg",
+      "urunler/11/Gemini_Generated_Image_ood77food77food7.jpeg",
+      "urunler/11/Gemini_Generated_Image_v1b8xgv1b8xgv1b8.jpeg",
+      "urunler/11/Gemini_Generated_Image_x5jeozx5jeozx5je.jpeg"
+    ],
+    "ana_gorsel": "urunler/11/main.jpeg"
+  },
+  {
+    "id": 9,
+    "baslik": "Aurel Valmont Kadın Güneş Gözlüğü AV-0009",
+    "stok_kodu": "AV-0009",
+    "fiyat_tl": 1299,
+    "cinsiyet": "Kadın",
+    "gorseller": [
+      "urunler/9/main.jpeg",
+      "urunler/9/2.jpeg",
+      "urunler/9/3.jpeg",
+      "urunler/9/4.jpeg",
+      "urunler/9/5.jpeg",
+      "urunler/9/6.jpeg"
+    ],
+    "ana_gorsel": "urunler/9/main.jpeg"
+  },
+  {
+    "id": 8,
+    "baslik": "Aurel Valmont Kadın Güneş Gözlüğü AV-0008",
+    "stok_kodu": "AV-0008",
+    "fiyat_tl": 1299,
+    "cinsiyet": "Kadın",
+    "gorseller": [
+      "urunler/8/main.jpeg",
+      "urunler/8/02.jpeg",
+      "urunler/8/03.jpeg",
+      "urunler/8/04.jpeg",
+      "urunler/8/05.jpeg",
+      "urunler/8/06.jpeg"
+    ],
+    "ana_gorsel": "urunler/8/main.jpeg"
+  },
+  {
+    "id": 16,
+    "baslik": "Aurel Valmont Kadın Güneş Gözlüğü AV-0016",
+    "stok_kodu": "AV-0016",
+    "fiyat_tl": 1299,
+    "cinsiyet": "Kadın",
+    "gorseller": [
+      "urunler/16/main.jpeg",
+      "urunler/16/Gemini_Generated_Image_edw9doedw9doedw9.jpeg",
+      "urunler/16/Gemini_Generated_Image_n8zlrtn8zlrtn8zl.jpeg",
+      "urunler/16/Gemini_Generated_Image_u75pe0u75pe0u75p.jpeg",
+      "urunler/16/Gemini_Generated_Image_uk6jp8uk6jp8uk6j.jpeg",
+      "urunler/16/Gemini_Generated_Image_v5182av5182av518.jpeg"
+    ],
+    "ana_gorsel": "urunler/16/main.jpeg"
+  },
+  {
+    "id": 15,
+    "baslik": "Aurel Valmont Kadın Güneş Gözlüğü AV-0015",
+    "stok_kodu": "AV-0015",
+    "fiyat_tl": 1299,
+    "cinsiyet": "Kadın",
+    "gorseller": [
+      "urunler/15/main.jpeg",
+      "urunler/15/Gemini_Generated_Image_4181w74181w74181.jpeg",
+      "urunler/15/Gemini_Generated_Image_5x6hmq5x6hmq5x6h.jpeg",
+      "urunler/15/Gemini_Generated_Image_fo0f1fo0f1fo0f1f.jpeg",
+      "urunler/15/Gemini_Generated_Image_lmcbi3lmcbi3lmcb.jpeg",
+      "urunler/15/Gemini_Generated_Image_pi3lrxpi3lrxpi3l.jpeg",
+      "urunler/15/Gemini_Generated_Image_ueiw4dueiw4dueiw.jpeg"
+    ],
+    "ana_gorsel": "urunler/15/main.jpeg"
   },
   {
     "id": 5,
@@ -76,6 +142,105 @@
       "urunler/5/05.jpeg"
     ],
     "ana_gorsel": "urunler/5/main.jpeg"
+  },
+  {
+    "id": 2,
+    "baslik": "Aurel Valmont Kadın Güneş Gözlüğü AV-0002",
+    "stok_kodu": "AV-0002",
+    "fiyat_tl": 1299,
+    "cinsiyet": "Kadın",
+    "gorseller": [
+      "urunler/2/main.jpeg",
+      "urunler/2/1.jpeg",
+      "urunler/2/2.jpeg",
+      "urunler/2/3.jpeg",
+      "urunler/2/4.jpeg",
+      "urunler/2/5.jpeg"
+    ],
+    "ana_gorsel": "urunler/2/main.jpeg"
+  },
+  {
+    "id": 19,
+    "baslik": "Aurel Valmont Kadın Güneş Gözlüğü AV-0019",
+    "stok_kodu": "AV-0019",
+    "fiyat_tl": 1299,
+    "cinsiyet": "Kadın",
+    "gorseller": [
+      "urunler/19/01.jpeg",
+      "urunler/19/02.jpeg",
+      "urunler/19/03.jpeg",
+      "urunler/19/04.jpeg",
+      "urunler/19/05.jpeg",
+      "urunler/19/06.jpeg",
+      "urunler/19/07.jpeg"
+    ],
+    "ana_gorsel": "urunler/19/01.jpeg"
+  },
+  {
+    "id": 7,
+    "baslik": "Aurel Valmont Kadın Güneş Gözlüğü AV-0007",
+    "stok_kodu": "AV-0007",
+    "fiyat_tl": 1299,
+    "cinsiyet": "Kadın",
+    "gorseller": [
+      "urunler/7/main.jpeg",
+      "urunler/7/01.jpeg",
+      "urunler/7/02.jpeg",
+      "urunler/7/03.jpeg",
+      "urunler/7/04.jpeg",
+      "urunler/7/06.jpeg"
+    ],
+    "ana_gorsel": "urunler/7/main.jpeg"
+  },
+  {
+    "id": 18,
+    "baslik": "Aurel Valmont Kadın Güneş Gözlüğü AV-0018",
+    "stok_kodu": "AV-0018",
+    "fiyat_tl": 1299,
+    "cinsiyet": "Kadın",
+    "gorseller": [
+      "urunler/18/01.jpeg",
+      "urunler/18/02.jpeg",
+      "urunler/18/03.jpeg",
+      "urunler/18/04.jpeg",
+      "urunler/18/05.jpeg",
+      "urunler/18/06.jpeg",
+      "urunler/18/07.jpeg"
+    ],
+    "ana_gorsel": "urunler/18/01.jpeg"
+  },
+  {
+    "id": 17,
+    "baslik": "Aurel Valmont Kadın Güneş Gözlüğü AV-0017",
+    "stok_kodu": "AV-0017",
+    "fiyat_tl": 1299,
+    "cinsiyet": "Kadın",
+    "gorseller": [
+      "urunler/17/01.jpeg",
+      "urunler/17/02.jpeg",
+      "urunler/17/03.jpeg",
+      "urunler/17/04.jpeg",
+      "urunler/17/05.jpeg",
+      "urunler/17/06.jpeg",
+      "urunler/17/07.jpeg"
+    ],
+    "ana_gorsel": "urunler/17/01.jpeg"
+  },
+  {
+    "id": 4,
+    "baslik": "Aurel Valmont Kadın Güneş Gözlüğü AV-0004",
+    "stok_kodu": "AV-0004",
+    "fiyat_tl": 1299,
+    "cinsiyet": "Kadın",
+    "gorseller": [
+      "urunler/4/main.jpeg",
+      "urunler/4/11.jpeg",
+      "urunler/4/12.jpeg",
+      "urunler/4/13.jpeg",
+      "urunler/4/14.jpeg",
+      "urunler/4/15.jpeg"
+    ],
+    "ana_gorsel": "urunler/4/main.jpeg"
   },
   {
     "id": 6,
@@ -97,54 +262,6 @@
     "ana_gorsel": "urunler/6/01.jpeg"
   },
   {
-    "id": 7,
-    "baslik": "Aurel Valmont Kadın Güneş Gözlüğü AV-0007",
-    "stok_kodu": "AV-0007",
-    "fiyat_tl": 1299,
-    "cinsiyet": "Kadın",
-    "gorseller": [
-      "urunler/7/main.jpeg",
-      "urunler/7/01.jpeg",
-      "urunler/7/02.jpeg",
-      "urunler/7/03.jpeg",
-      "urunler/7/04.jpeg",
-      "urunler/7/06.jpeg"
-    ],
-    "ana_gorsel": "urunler/7/main.jpeg"
-  },
-  {
-    "id": 8,
-    "baslik": "Aurel Valmont Kadın Güneş Gözlüğü AV-0008",
-    "stok_kodu": "AV-0008",
-    "fiyat_tl": 1299,
-    "cinsiyet": "Kadın",
-    "gorseller": [
-      "urunler/8/main.jpeg",
-      "urunler/8/02.jpeg",
-      "urunler/8/03.jpeg",
-      "urunler/8/04.jpeg",
-      "urunler/8/05.jpeg",
-      "urunler/8/06.jpeg"
-    ],
-    "ana_gorsel": "urunler/8/main.jpeg"
-  },
-  {
-    "id": 9,
-    "baslik": "Aurel Valmont Kadın Güneş Gözlüğü AV-0009",
-    "stok_kodu": "AV-0009",
-    "fiyat_tl": 1299,
-    "cinsiyet": "Kadın",
-    "gorseller": [
-      "urunler/9/main.jpeg",
-      "urunler/9/2.jpeg",
-      "urunler/9/3.jpeg",
-      "urunler/9/4.jpeg",
-      "urunler/9/5.jpeg",
-      "urunler/9/6.jpeg"
-    ],
-    "ana_gorsel": "urunler/9/main.jpeg"
-  },
-  {
     "id": 10,
     "baslik": "Aurel Valmont Kadın Güneş Gözlüğü AV-0010",
     "stok_kodu": "AV-0010",
@@ -159,22 +276,6 @@
       "urunler/10/Gemini_Generated_Image_ycv2osycv2osycv2.jpeg"
     ],
     "ana_gorsel": "urunler/10/main.jpeg"
-  },
-  {
-    "id": 11,
-    "baslik": "Aurel Valmont Kadın Güneş Gözlüğü AV-0011",
-    "stok_kodu": "AV-0011",
-    "fiyat_tl": 1299,
-    "cinsiyet": "Kadın",
-    "gorseller": [
-      "urunler/11/main.jpeg",
-      "urunler/11/Gemini_Generated_Image_ihsjf6ihsjf6ihsj.jpeg",
-      "urunler/11/Gemini_Generated_Image_o249u3o249u3o249.jpeg",
-      "urunler/11/Gemini_Generated_Image_ood77food77food7.jpeg",
-      "urunler/11/Gemini_Generated_Image_v1b8xgv1b8xgv1b8.jpeg",
-      "urunler/11/Gemini_Generated_Image_x5jeozx5jeozx5je.jpeg"
-    ],
-    "ana_gorsel": "urunler/11/main.jpeg"
   },
   {
     "id": 12,
@@ -209,55 +310,5 @@
       "urunler/13/Gemini_Generated_Image_xjn7y0xjn7y0xjn7.jpeg"
     ],
     "ana_gorsel": "urunler/13/main.jpeg"
-  },
-  {
-    "id": 14,
-    "baslik": "Aurel Valmont Kadın Güneş Gözlüğü AV-0014",
-    "stok_kodu": "AV-0014",
-    "fiyat_tl": 1299,
-    "cinsiyet": "Kadın",
-    "gorseller": [
-      "urunler/14/main.jpeg",
-      "urunler/14/Gemini_Generated_Image_6xvt4i6xvt4i6xvt.jpeg",
-      "urunler/14/Gemini_Generated_Image_7nn4917nn4917nn4.jpeg",
-      "urunler/14/Gemini_Generated_Image_ambqb3ambqb3ambq.jpeg",
-      "urunler/14/Gemini_Generated_Image_hgno7ahgno7ahgno.jpeg",
-      "urunler/14/Gemini_Generated_Image_t4umf7t4umf7t4um.jpeg",
-      "urunler/14/Gemini_Generated_Image_t7fwkot7fwkot7fw.jpeg"
-    ],
-    "ana_gorsel": "urunler/14/main.jpeg"
-  },
-  {
-    "id": 15,
-    "baslik": "Aurel Valmont Kadın Güneş Gözlüğü AV-0015",
-    "stok_kodu": "AV-0015",
-    "fiyat_tl": 1299,
-    "cinsiyet": "Kadın",
-    "gorseller": [
-      "urunler/15/main.jpeg",
-      "urunler/15/Gemini_Generated_Image_4181w74181w74181.jpeg",
-      "urunler/15/Gemini_Generated_Image_5x6hmq5x6hmq5x6h.jpeg",
-      "urunler/15/Gemini_Generated_Image_fo0f1fo0f1fo0f1f.jpeg",
-      "urunler/15/Gemini_Generated_Image_lmcbi3lmcbi3lmcb.jpeg",
-      "urunler/15/Gemini_Generated_Image_pi3lrxpi3lrxpi3l.jpeg",
-      "urunler/15/Gemini_Generated_Image_ueiw4dueiw4dueiw.jpeg"
-    ],
-    "ana_gorsel": "urunler/15/main.jpeg"
-  },
-  {
-    "id": 16,
-    "baslik": "Aurel Valmont Kadın Güneş Gözlüğü AV-0016",
-    "stok_kodu": "AV-0016",
-    "fiyat_tl": 1299,
-    "cinsiyet": "Kadın",
-    "gorseller": [
-      "urunler/16/main.jpeg",
-      "urunler/16/Gemini_Generated_Image_edw9doedw9doedw9.jpeg",
-      "urunler/16/Gemini_Generated_Image_n8zlrtn8zlrtn8zl.jpeg",
-      "urunler/16/Gemini_Generated_Image_u75pe0u75pe0u75p.jpeg",
-      "urunler/16/Gemini_Generated_Image_uk6jp8uk6jp8uk6j.jpeg",
-      "urunler/16/Gemini_Generated_Image_v5182av5182av518.jpeg"
-    ],
-    "ana_gorsel": "urunler/16/main.jpeg"
   }
 ]
